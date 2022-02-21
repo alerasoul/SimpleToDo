@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimpleToDoApp</string>
+    <string name="editTit">Edit ToDo</string>
+    <string name="editBtn">Update ToDo</string>
+    <string name="addTit">Add new ToDo</string>
+    <string name="addBtn">Add ToDo</string>
+</resources>

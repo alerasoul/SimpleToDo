@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:layout_margin="10dp"
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roman"
+        tools:text="ToDo1"
+        android:buttonTint="@color/gray"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+</RelativeLayout>
