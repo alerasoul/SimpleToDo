@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="110dp"
+    app:cardBackgroundColor="@color/pink"
+    app:cardCornerRadius="16dp"
+    android:layout_margin="10dp"
+    app:contentPadding="0dp"
+    android:id="@+id/root">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/titleCat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roman"
+        tools:text="All"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/editCat"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_baseline_edit_24" />
+        <ImageView
+            android:id="@+id/deleteCat"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_baseline_delete_24" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

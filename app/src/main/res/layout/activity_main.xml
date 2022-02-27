@@ -4,58 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/darkBlue"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/layTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@color/purple"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/rain"
-            android:paddingRight="30dp"
-            android:text="ToDo List"
-            android:textColor="@color/lightGray"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/dateTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roman"
-            android:paddingLeft="30dp"
-            android:text="10-Apr-2012"
-            android:textColor="@color/lightGray"
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rec"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layTitle"
-        android:layout_marginTop="20dp" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <TextView
+        android:id="@+id/mainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/purple"
-        android:elevation="12dp"
-        android:src="@drawable/ic_baseline_add_24" />
+        android:fontFamily="@font/lemon"
+        android:text="@string/mainTitle"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingBottom="180dp"
+        android:textColor="@color/pink"
+        android:textSize="30sp"/>
+    <TextView
+        android:layout_below="@+id/mainTitle"
+        android:id="@+id/dateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/take_on"
+        tools:text="10-Apr-2020"
+        android:letterSpacing="0.08"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="-200dp"
+        android:src="@drawable/pic" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"/>
+
+ </RelativeLayout>

@@ -11,23 +11,23 @@ import android.widget.CheckBox
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.simpletodoapp.R
-import com.example.simpletodoapp.model.ToDO
+import com.example.simpletodoapp.model.ToDo
 
-class RecAdapter(context: Context) : RecyclerView.Adapter<RecAdapter.MyViewHolder>() {
+class ToDoAdapter(context: Context) : RecyclerView.Adapter<ToDoAdapter.MyViewHolder>() {
 
-    private var data = ArrayList<ToDO>()
+    private var data = ArrayList<ToDo>()
     private lateinit var onItemClickListener: OnItemClickListener
     private lateinit var onDoneStateChangeListener: OnDoneStateChangeListener
     var context = context
 
-    fun setData(list: List<ToDO>) {
+    fun setData(list: List<ToDo>) {
         data.clear()
         data.addAll(list)
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val v: View = LayoutInflater.from(parent.context).inflate(R.layout.item_rec, parent, false)
+        val v: View = LayoutInflater.from(parent.context).inflate(R.layout.item_todo, parent, false)
         return MyViewHolder(v)
     }
 
@@ -41,10 +41,10 @@ class RecAdapter(context: Context) : RecyclerView.Adapter<RecAdapter.MyViewHolde
                 item.title.length,
                 Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
             holder.checkBox.text = sp
-            holder.checkBox.setTextColor(ContextCompat.getColor(context, R.color.gray))
+            holder.checkBox.setTextColor(ContextCompat.getColor(context, R.color.lightGray))
             holder.checkBox.isChecked = true
         } else
-            holder.checkBox.setTextColor(ContextCompat.getColor(context, R.color.black))
+            holder.checkBox.setTextColor(ContextCompat.getColor(context, R.color.white))
         holder.checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
             onDoneStateChangeListener.onStateChanged(item, isChecked)
         }
@@ -54,7 +54,7 @@ class RecAdapter(context: Context) : RecyclerView.Adapter<RecAdapter.MyViewHolde
         return data.size
     }
 
-    fun getToDo(position: Int): ToDO {
+    fun getToDo(position: Int): ToDo {
         return data[position]
     }
 
@@ -69,7 +69,7 @@ class RecAdapter(context: Context) : RecyclerView.Adapter<RecAdapter.MyViewHolde
     }
 
     interface OnItemClickListener {
-        fun onItemClick(toDO: ToDO)
+        fun onItemClick(toDo: ToDo)
     }
 
     fun setOnItemClickListener(onItemClickListener: OnItemClickListener) {
@@ -77,7 +77,7 @@ class RecAdapter(context: Context) : RecyclerView.Adapter<RecAdapter.MyViewHolde
     }
 
     interface OnDoneStateChangeListener {
-        fun onStateChanged(toDO: ToDO, isChecked: Boolean)
+        fun onStateChanged(toDo: ToDo, isChecked: Boolean)
     }
 
     fun setOnStateChangeListener(onDoneStateChangeListener: OnDoneStateChangeListener) {

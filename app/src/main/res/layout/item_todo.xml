@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:paddingStart="30dp"
     android:paddingEnd="30dp"
+    android:background="@color/darkBlue"
     android:layout_height="wrap_content">
 
     <CheckBox
@@ -13,8 +14,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roman"
         tools:text="ToDo1"
-        android:buttonTint="@color/gray"
-        android:textColor="@color/black"
+        android:buttonTint="@color/lightGray"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
     <View
@@ -22,6 +23,6 @@
         android:layout_below="@+id/checkbox"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/gray" />
+        android:background="@color/lightGray" />
 
 </RelativeLayout>

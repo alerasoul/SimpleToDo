@@ -9,9 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightGray">#CCCCCC</color>
     <color name="blue">#2C3A85</color>
+    <color name="darkBlue">#030B37</color>
     <color name="red">#C30808</color>
     <color name="gray">#4E4E4E</color>
     <color name="purple">#370345</color>
+    <color name="lightPurple">#B8A1BD</color>
     <color name="yellow">#FFC107</color>
-    <color name="green">#0C630F</color>
+    <color name="lightYellow">#FDE69F</color>
+    <color name="green">#0A490D</color>
+    <color name="darkGreen">#022503</color>
+    <color name="darkGray">#303030</color>
+    <color name="teal">#3600BCD4</color>
+    <color name="pink">#FA968F</color>
+
 </resources>
